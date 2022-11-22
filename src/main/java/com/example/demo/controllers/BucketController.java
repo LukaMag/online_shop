@@ -1,6 +1,6 @@
-package com.example.demo.category;
+package com.example.demo.controllers;
 
-import com.example.demo.category.entity.Category;
+import com.example.demo.entity.Bucket;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,11 +10,11 @@ import java.util.Collections;
 import java.util.List;
 
 @RestController
-@RequestMapping("/shoes")
+@RequestMapping("/bucket")
 @RequiredArgsConstructor
-public class ClothController {
+public class BucketController {
     @GetMapping
-    public List<Category> getShoes(){
+    public List<Bucket> getCloth(){
         return Collections.EMPTY_LIST;
     }
 }

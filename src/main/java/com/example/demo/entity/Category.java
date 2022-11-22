@@ -1,12 +1,10 @@
-package com.example.demo.category.entity;
+package com.example.demo.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @Table(name = "categories")
@@ -20,6 +18,9 @@ public class Category {
 
     @Column(name = "category_desc")
     private String categoryDesc;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "category")
+    private List<Cloth> cloth;
 
 
 }
